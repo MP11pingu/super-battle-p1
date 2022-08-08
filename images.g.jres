@@ -1,0 +1,21 @@
+{
+    "anim2": {
+        "namespace": "myAnimations",
+        "id": "anim2",
+        "mimeType": "application/mkcd-animation",
+        "data": "YzgwMDEwMDAxMDAwMDEwMDAwMDAwMDg4ODgwMDAwMDAwMDAwODg4ODg4ODgwMDAwMDA4MDg4ODg4ODg4MDgwMDAwODg4ODg4ODg4ODg4MDAwMDg4ODg4ODg4ODg4ODAwMDA4ODg4ODg4ODg4ODgwMDAwODg4ODg4ODg4ODg4MDA4MDg4ODg4ODg4ODg4ODA4ODA4ODg4ODg4ODg4ODgwODAwODg4ODg4ODg4ODg4MDAwMDgwODg4ODg4ODgwODAwMDA5OTg4ODg4ODg4OTkwMDAwOTk4ODg4ODg4ODk5MDAwMDk5ODg4ODg4ODg5OTAwMDAwMGYwZmZmZjBmMDAwMDAwMDBmMDBmZjAwZjAwMDA=",
+        "displayName": "myAnim0"
+    },
+    "anim1": {
+        "namespace": "myAnimations",
+        "id": "anim1",
+        "mimeType": "application/mkcd-animation",
+        "data": "YzgwMDEwMDAxMDAwMDEwMDAwMDAwMDg4ODgwMDAwMDAwMDAwODg4ODg4ODgwMDAwMDA4MDg4ODg4ODg4MDgwMDAwODg4ODg4ODg4ODg4MDAwMDg4ODg4ODg4ODg4ODAwMDA4ODg4ODg4ODg4ODgwMDAwODg4ODg4ODg4ODg4MDA4MDg4Zjg4ODhmODg4ODA4ODA4OGY4ODg4Zjg4ODgwODAwODg4ODg4ODg4ODg4MDAwMDgwODg4ODg4ODgwODAwMDA5OTg4ODg4ODg4OTkwMDAwOTk4ODg4ODg4ODk5MDAwMDk5ODg4ODg4ODg5OTAwMDAwMGYwZmZmZjBmMDAwMDAwMDBmMDBmZjAwZjAwMDA=",
+        "displayName": "myAnim"
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myImages"
+    }
+}
