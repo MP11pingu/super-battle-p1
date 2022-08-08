@@ -6,7 +6,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     false
     )
 })
-controller.combos.attachCombo("a-b", function () {
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile = sprites.createProjectileFromSprite(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -15,17 +15,8 @@ controller.combos.attachCombo("a-b", function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        . . . . . 8 8 8 8 8 . . . . . . 
-        . . . . 8 8 8 8 8 8 . . . . . . 
-        . . . . 8 8 8 8 8 8 . . . . . . 
-        . . . . . 8 8 8 8 8 . . . . . . 
-        . . . . 5 5 8 8 8 8 . . . . . . 
-        . . . 5 5 5 . 8 8 . . . . . . . 
-        . . . 5 5 . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, mySprite, 0, 0)
-    projectile = sprites.createProjectileFromSprite(img`
+        5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+        5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -33,16 +24,7 @@ controller.combos.attachCombo("a-b", function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . 8 8 . . . . . . . . 
-        . . . . . . 8 8 . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        . . . . . . . . . . . . . . . . 
-        `, mySprite, 50, 0)
+        `, mySprite, -50, 0)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile = sprites.createProjectileFromSprite(img`
@@ -53,16 +35,16 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        . . . . . 8 8 8 8 8 . . . . . . 
-        . . . . 8 8 8 8 8 8 . . . . . . 
-        . . . . 8 8 8 8 8 8 . . . . . . 
-        . . . . . 8 8 8 8 8 . . . . . . 
-        . . . . 5 5 8 8 8 8 . . . . . . 
-        . . . 5 5 5 . 8 8 . . . . . . . 
-        . . . 5 5 . . . . . . . . . . . 
+        5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+        5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
-        `, mySprite, 0, 0)
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, mySprite, 50, 0)
 })
 controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     animation.runImageAnimation(
@@ -336,22 +318,22 @@ scene.setBackgroundImage(img`
     7777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777777
     `)
 mySprite = sprites.create(img`
-    . . . . . . 8 8 8 8 . . . . . . 
-    . . . . 8 8 8 8 8 8 8 8 . . . . 
-    . . . 8 8 8 8 8 8 8 8 8 8 . . . 
-    . . 8 8 8 8 8 8 8 8 8 8 8 8 . . 
-    . . 8 8 8 8 8 8 8 8 8 8 8 8 . . 
-    . . 8 8 8 8 8 8 8 8 8 8 8 8 . . 
-    . . 8 8 8 8 8 8 8 8 8 8 8 8 . . 
-    . 8 8 8 8 8 f 8 8 f 8 8 8 8 8 . 
-    . 8 8 8 8 8 f 8 8 f 8 8 8 8 8 . 
-    . . 8 8 8 8 8 8 8 8 8 8 8 8 . . 
-    . . . 8 8 8 8 8 8 8 8 8 8 . . . 
-    . . 9 9 8 8 8 8 8 8 8 8 9 9 . . 
-    . . 9 9 8 8 8 8 8 8 8 8 9 9 . . 
-    . . 9 9 8 8 8 8 8 8 8 8 9 9 . . 
-    . . . . . f f f f f f . . . . . 
-    . . . . . f f . . f f . . . . . 
+    . . . . . . 2 2 2 2 . . . . . . 
+    . . . . 2 2 2 2 2 2 2 2 . . . . 
+    . . . 2 2 2 2 2 2 2 2 2 2 . . . 
+    . . 2 2 2 2 2 2 2 2 2 2 2 2 . . 
+    . . 2 2 2 2 2 2 2 2 2 2 2 2 . . 
+    . . 2 2 2 2 2 2 2 2 2 2 2 2 . . 
+    . . 2 2 2 2 2 2 2 2 2 2 2 2 . . 
+    . 2 2 2 2 2 f 2 2 f 2 2 2 2 2 . 
+    . 2 2 2 2 2 f 2 2 f 2 2 2 2 2 . 
+    . . 2 2 2 2 2 2 2 2 2 2 2 2 . . 
+    . . . 2 2 2 2 5 5 2 2 2 2 . . . 
+    . . 4 4 2 2 2 5 5 2 2 2 4 4 . . 
+    . . 4 4 2 2 2 5 5 2 2 2 4 4 . . 
+    . . 4 4 2 2 2 2 2 2 2 2 4 4 . . 
+    . . . . . 4 4 4 4 4 4 . . . . . 
+    . . . . . 4 4 . . 4 4 . . . . . 
     `, SpriteKind.Player)
 controller.moveSprite(mySprite, 100, 100)
 mySprite2 = sprites.create(img`
@@ -360,24 +342,24 @@ mySprite2 = sprites.create(img`
     ...........cddbbf...............
     ..........fccbbcf............ccc
     ....ffffffccccccff.........ccbbc
-    ..ffbbbbbbbbbbbbbcfff.....cdbbc.
-    ffbbbbbbbbbcbcbbbbcccff..cddbbf.
-    fbcbbbbbffbbcbcbbbcccccfffdbbf..
-    fbbb1111ff1bcbcbbbcccccccbbbcf..
-    .fb11111111bbbbbbcccccccccbccf..
-    ..fccc33cc11bbbbccccccccfffbbcf.
-    ...fc131c111bbbcccccbdbc...fbbf.
-    ....f33c111cbbbfdddddcc.....fbbf
-    .....ff1111fbdbbfddcc........fff
-    .......cccccfbdbbfc.............
-    .............fffff..............
+    ..ffccccccccccccccfff.....ccbbc.
+    ffcccccccccccccccccccff..cccbbf.
+    fccccccc22cccccccccccccfffcbbf..
+    fccccccc22cccccccccccccccbbbcf..
+    .fccccccccccccccccccccccccbccf..
+    ..fcccccccccccccccccccccfffbbcf.
+    ...fcccccccccccccccccccc...fbbf.
+    ....fcccccccccccccccccc.....fbbf
+    .....ffccccfccccccccc........fff
+    .......cccccfcccccc.............
+    .............ccccc..............
     `, SpriteKind.Enemy)
 mySprite2.setPosition(146, 28)
 statusbar = statusbars.create(20, 4, StatusBarKind.Health)
 statusbar.attachToSprite(mySprite)
-statusbar.setColor(5, 8)
-mySprite2.follow(mySprite, 40)
+statusbar.setColor(5, 4)
+mySprite2.follow(mySprite, 50)
 mySprite.setStayInScreen(true)
 statusbar2 = statusbars.create(20, 4, StatusBarKind.EnemyHealth)
 statusbar2.attachToSprite(mySprite2)
-statusbar.setColor(7, 2)
+statusbar2.setColor(2, 13)
